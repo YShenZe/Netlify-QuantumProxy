@@ -1,0 +1,23 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/proxy/*"
+  to = "/.netlify/functions/proxy"
+  status = 200
+
+[[redirects]]
+  from = "/github/*"
+  to = "/.netlify/functions/github/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/openai/*"
+  to = "/.netlify/functions/openai/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/gemini/*"
+  to = "/.netlify/functions/gemini/:splat"
+  status = 200
